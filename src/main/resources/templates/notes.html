@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Bank notes test</title>
+</head>
+<body>
+<form method="post" action="/addNote">
+    <h2>Tilføj ny note.</h2>
+    <textarea name="note" placeholder="Tilføj note"></textarea>
+    <input type="submit" value="Opret Note">
+</form>
+
+<table>
+    <tr th:each="note :${notes}">
+        <form method="post" th:action="${'/editNote/'+ note.id}">
+            <textarea name="note" th:text="${note.note}"></textarea>
+            <input type="submit" value="Edit Note">
+        </form><br>
+    </tr>
+</table>
+</body>
+</html>

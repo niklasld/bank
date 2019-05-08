@@ -1,0 +1,1 @@
+Hey der... Dette er en test af AJAX som kan loade en textfil og lægge det ind på din HTML side.

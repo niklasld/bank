@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Maxx Bank test</title>
+</head>
+<body>
+<h3>Velkomment til Maxx Bank</h3>
+
+<form method="post" action="/addUser">
+    <input type="text" name="name" placeholder="Navn">
+    <input type="text" name="accountNumber" placeholder="acc number">
+    <input type="text" name="balance" placeholder="balance">
+    <input type="submit" value="Opret Bruger">
+</form>
+<a href="/notes.html">Noter</a>
+<table>
+    <thead>
+    <th>Navn</th>
+    <th>Konto</th>
+    <th>Saldo</th>
+    </thead>
+    <tr th:each="bruger :${customers}">
+        <td th:text="${bruger.name}"></td>
+        <td th:text="${bruger.accountNumber}"></td>
+        <td th:text="${bruger.balance}"></td>
+    </tr>
+</table>
+</body>
+</html>
