@@ -19,7 +19,7 @@ $().ready(function () {
 
 $(document).ready(function () {
     $("button").click(function() {
-        $("#AJAXknap").load("/file/AJAXtest.txt");
+        jQuery("#AJAXknap").load("/file/AJAXtest.txt");
     });
     
 });
